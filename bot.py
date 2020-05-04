@@ -32,7 +32,8 @@ async def _8ball(ctx, *, question):
 @client.command()
 @commands.has_permissions(manage_messages=True)
 async def delete(ctx, amount=6):
-    await ctx.send(f'Deleting {amount} messages in 3.')
+
+    await ctx.send(f'Deleting in 3.')
     await ctx.send('3')
     await asyncio.sleep(1)
     await ctx.send('2')
@@ -40,7 +41,10 @@ async def delete(ctx, amount=6):
     await ctx.send('1')
     await asyncio.sleep(1)
     await ctx.channel.purge(limit=amount+5)
-    await ctx.send(f'`{amount} Messages deleted`')
+    if amount > 1:
+    	await ctx.send(f'`{amount} Messages deleted`')
+    else:
+    	await ctx.send(f'`{amount} Message deleted`')
 
 
 @client.command()
