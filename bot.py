@@ -40,7 +40,11 @@ async def delete(ctx, amount=6):
     await ctx.send('1')
     await asyncio.sleep(1)
     await ctx.channel.purge(limit=amount+5)
+    if {amount} < 2
+	await ctx.send(f'`{amount} Message deleted`')
+else:
     await ctx.send(f'`{amount} Messages deleted`')
+
 
 @client.command()
 @commands.has_permissions(manage_messages=True)
