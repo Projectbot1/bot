@@ -32,7 +32,7 @@ async def _8ball(ctx, *, question):
 @client.command()
 @commands.has_permissions(manage_messages=True)
 async def delete(ctx, amount=6):
-    await ctx.send(f'Deleting {amount} messages by the count of 3.')
+    await ctx.send(f'Deleting {amount} messages by in 3.')
     await ctx.send('3')
     await asyncio.sleep(1)
     await ctx.send('2')
