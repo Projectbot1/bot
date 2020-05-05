@@ -18,7 +18,7 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     await member.send(f'{member} Thank you for joining')
-    role = get(member.guild.roles, name="Tester")
+    role = get(member.guild.roles, name='Tester')
     await member.add_roles(role)
 
 @client.event
