@@ -9,7 +9,13 @@ import asyncio
 client = commands.Bot(command_prefix='.')
 
 players = {}
- 
+ROLE = "tester"
+
+@bot.event
+async def on_member_join(member):
+    role = get(member.guild.roles, name=ROLE)
+    await member.add_roles(role)
+
 @client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Game("The bot which would change it all."))
