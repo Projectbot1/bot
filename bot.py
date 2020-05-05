@@ -9,11 +9,10 @@ import asyncio
 client = commands.Bot(command_prefix='.')
 
 players = {}
-ROLE = "tester"
 
 @client.event
 async def on_member_join(member):
-    role = get(member.guild.roles, name=ROLE)
+    role = get(member.guild.roles, name="Tester")
     await member.add_roles(role)
 
 @client.event
