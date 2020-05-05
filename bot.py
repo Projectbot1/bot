@@ -11,7 +11,7 @@ client = commands.Bot(command_prefix='.')
 players = {}
 ROLE = "tester"
 
-@bot.event
+@client.event
 async def on_member_join(member):
     role = get(member.guild.roles, name=ROLE)
     await member.add_roles(role)
