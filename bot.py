@@ -54,7 +54,9 @@ async def delete(ctx, amount=6):
     	await ctx.send(f'`{amount} Messages deleted`')
     else:
     	await ctx.send(f'`{amount} Message deleted`')
-
+.then(msg => {
+    msg.delete(10000)
+  })
 
 @client.command()
 @commands.has_permissions(manage_messages=True)
